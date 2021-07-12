@@ -19,12 +19,14 @@ import com.fuadi.Viaggio.database.DatabaseHelper;
 
 public class RegisterActivity extends AppCompatActivity {
 
+    //Deklarasi dari variabel yang ada
     EditText txtName, txtUsername, txtPassword;
     Button btnDaftar, btnKeLogin;
     DatabaseHelper dbHelper;
     SQLiteDatabase db;
     String name, username, password;
 
+    //menghubungkan componen variabel ke layout
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -76,6 +78,7 @@ public class RegisterActivity extends AppCompatActivity {
         });
     }
 
+    //setting flags
     public static void setWindowFlag(Activity activity, final int bits, boolean on) {
 
         Window win = activity.getWindow();

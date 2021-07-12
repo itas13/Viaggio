@@ -29,6 +29,7 @@ import java.util.HashMap;
 
 public class BookTiketActivity extends AppCompatActivity {
 
+    //Deklarasi dari variabel yang ada di BookTiketActivity
     protected Cursor cursor;
     DatabaseHelper dbHelper;
     SQLiteDatabase db;
@@ -44,6 +45,7 @@ public class BookTiketActivity extends AppCompatActivity {
     private DatePickerDialog dpTanggal;
     Calendar newCalendar = Calendar.getInstance();
 
+    //menghubungkan componen variabel ke layout
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -136,6 +138,7 @@ public class BookTiketActivity extends AppCompatActivity {
         email = user.get(SessionManager.KEY_EMAIL);
         setDateTimeField();
 
+        //Menampilkan isi dari componen kedalam layout
         btnBook.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -193,6 +196,7 @@ public class BookTiketActivity extends AppCompatActivity {
 
     }
 
+    //setting toolbar
     private void setupToolbar() {
         Toolbar toolbar = findViewById(R.id.tbKrl);
         toolbar.setTitle("Form Booking");
@@ -200,6 +204,7 @@ public class BookTiketActivity extends AppCompatActivity {
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
     }
 
+    //menambahkan data
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         if (item.getItemId() == android.R.id.home) {
@@ -280,6 +285,7 @@ public class BookTiketActivity extends AppCompatActivity {
         hargaTotal = hargaTotalDewasa + hargaTotalAnak;
     }
 
+    //setting waktu
     private void setDateTimeField() {
         etTanggal.setOnClickListener(new View.OnClickListener() {
             @Override

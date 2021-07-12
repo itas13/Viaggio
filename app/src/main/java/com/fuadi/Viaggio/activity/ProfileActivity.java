@@ -17,12 +17,14 @@ import java.util.HashMap;
 
 public class ProfileActivity extends AppCompatActivity {
 
+    //Deklarasi dari variabel yang ada
     protected Cursor cursor;
     DatabaseHelper dbHelper;
     SQLiteDatabase db;
     SessionManager session;
     String name, email;
 
+    //menghubungkan componen variabel ke layout
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -53,6 +55,7 @@ public class ProfileActivity extends AppCompatActivity {
 
     }
 
+    //setting toolbar
     private void setupToolbar() {
         Toolbar toolbar = findViewById(R.id.tbProfile);
         toolbar.setTitle("Identitas Penyewa");
@@ -60,6 +63,7 @@ public class ProfileActivity extends AppCompatActivity {
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
     }
 
+    //menambahkan data
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         if (item.getItemId() == android.R.id.home) {

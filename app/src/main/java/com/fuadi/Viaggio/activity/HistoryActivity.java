@@ -25,6 +25,7 @@ import java.util.HashMap;
 
 public class HistoryActivity extends AppCompatActivity {
 
+    //Deklarasi dari variabel yang ada
     protected Cursor cursor;
     DatabaseHelper dbHelper;
     SQLiteDatabase db;
@@ -33,6 +34,7 @@ public class HistoryActivity extends AppCompatActivity {
     String email;
     TextView tvNotFound;
 
+    //menghubungkan componen variabel ke layout
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -53,6 +55,7 @@ public class HistoryActivity extends AppCompatActivity {
         setupToolbar();
     }
 
+    //setting toolbar
     private void setupToolbar() {
         Toolbar toolbar = findViewById(R.id.tbHistory);
         toolbar.setTitle("Riwayat Booking");
@@ -60,6 +63,7 @@ public class HistoryActivity extends AppCompatActivity {
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
     }
 
+    //menambahkan data
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         if (item.getItemId() == android.R.id.home) {

@@ -24,6 +24,7 @@ import com.fuadi.Viaggio.session.SessionManager;
 
 public class LoginActivity extends AppCompatActivity {
 
+    //Deklarasi dari variabel yang ada
     EditText txtUsername, txtPassword;
     Button btnLogin, btnRegister;
     AlertDialogManager alert = new AlertDialogManager();
@@ -31,6 +32,7 @@ public class LoginActivity extends AppCompatActivity {
     DatabaseHelper dbHelper;
     SQLiteDatabase db;
 
+    //menghubungkan componen variabel ke layout
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -97,6 +99,7 @@ public class LoginActivity extends AppCompatActivity {
         });
     }
 
+    //setting flags
     public static void setWindowFlag(Activity activity, final int bits, boolean on) {
 
         Window win = activity.getWindow();
@@ -109,6 +112,7 @@ public class LoginActivity extends AppCompatActivity {
         win.setAttributes(winParams);
     }
 
+    //logout process
     @Override
     public void onBackPressed() {
         final AlertDialog.Builder builder = new AlertDialog.Builder(LoginActivity.this);

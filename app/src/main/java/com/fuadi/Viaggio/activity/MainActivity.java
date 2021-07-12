@@ -16,6 +16,7 @@ import com.fuadi.Viaggio.session.SessionManager;
 
 public class MainActivity extends AppCompatActivity {
 
+    //Deklarasi dari variabel yang ada
     AlertDialogManager alert = new AlertDialogManager();
     SessionManager session;
     Button btnLogout;
@@ -48,22 +49,21 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
+    //menampilkan fitur profile
     public void profileMenu(View v) {
         Intent i = new Intent(this, ProfileActivity.class);
         startActivity(i);
     }
 
+    //menampilkan fitur history
     public void historyMenu(View v) {
         Intent i = new Intent(this, HistoryActivity.class);
         startActivity(i);
     }
 
+    //menampilkan fitur booktiket
     public void bookTiket(View v) {
         Intent i = new Intent(this, BookTiketActivity.class);
         startActivity(i);
-    }
-
-    public void bookHotel(View v) {
-        Toast.makeText(getApplicationContext(), "Mohon maaf, sistem sedang dalam pengembangan.", Toast.LENGTH_LONG).show();
     }
 }
